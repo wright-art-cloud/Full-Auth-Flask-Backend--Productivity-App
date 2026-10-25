@@ -1,1 +1,17 @@
 Single-database configuration for Flask.
+# Full Auth Flask Backend - Productivity App
+
+A secure, session-authenticated RESTful Flask API backend designed for productivity tools. This application features user registration, login, active session management, secure password hashing with `Flask-Bcrypt`, database migrations via `Flask-Migrate`, and fully user-owned `Note` resources supporting complete CRUD operations and pagination.
+
+---
+
+## Project Architecture & File Structure
+
+```text
+productivity-backend/
+├── app.py              # Core Flask application, extension configurations, auth views, and RESTful CRUD resources
+├── models.py           # SQLAlchemy User and Note models with built-in bcrypt password hashing
+├── seed.py             # Database seeder script utilizing Faker for sample users and notes
+├── app.db              # SQLite database (generated and managed via Flask-Migrate)
+├── Pipfile             # Dependency tracking and virtual environment specification
+└── README.md           # Project documentation and endpoint references
